@@ -1,26 +1,22 @@
 <template>
     <div> 
-        <h1>Friends List</h1>
-        <ul>
-            <li v-for="i in friends" :key="i">
-                {{i}}
-            </li>
-        </ul>
+        <h1 class="title">Friends List </h1>
+        <FriendsVue />
 
     </div> 
 </template>
 
 <script>
-export default { 
-    data() { 
-    return { 
-        friends:["Manny", "Sabika", "Sam"]   
-    }; 
-    } 
+import FriendsVue from "./Friends.vue";
+export default {
+components: {
+    FriendsVue
+  }
 }
 </script>
 
 <style>
     h1 {color:gray}
     body {color:coral; background-color:black;border: 2px solid coral}
+    .title{color:blue}
 </style>
